@@ -1,0 +1,173 @@
+/* Import Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Global Colors */
+:root {
+  /* Colors */
+  /* Primary */
+  --Pale-Blue: hsl(225, 100%, 94%); 
+  --Bright-Blue: hsl(245, 75%, 52%); 
+  /* Neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%); 
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-Blue: hsl(223, 47%, 23%); 
+}
+
+/* Set global styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Background image for desktop screens */
+.bg-image {
+  background: url("images/pattern-background-desktop.svg");
+  background-size: cover;
+  height: 60vh;
+  padding: 20px;
+}
+
+/* Style the main content area */
+main {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+/* Style the card element */
+#card {
+  width: 350px;
+  height: 600px;
+  background-color: var(--Very-pale-blue);
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 1px 5px 15px 2px rgb(0, 0, 0, 0.1);
+}
+
+/* Style the heading (h1) */
+h1 {
+  margin-top: 5px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Style the hero image */
+#img-hero {
+  width: -webkit-fill-available;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* Style the paragraph text */
+#text-p {
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--Desaturated-blue);
+}
+
+/* Style the music image */
+#img-music {
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.1);
+  border-radius: 50px;
+}
+
+/* Style all anchor tags (links) */
+a {
+  font-weight: 600;
+}
+
+/* Style the plan section */
+.plan {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--Pale-Blue);
+  height: 70px;
+  width: 300px;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Style the payment button */
+#payment-btn {
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: var(--Bright-Blue);
+  color: var(--Pale-Blue);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#payment-btn:hover {
+  opacity: 0.8;
+}
+
+
+/* Style the cancel button */
+#cancel-btn {
+  padding: 10px;  
+  background: transparent;  
+  border-style: none;  
+  cursor: pointer;  
+  color: var(--Desaturated-blue);  
+  transition: color 0.2s ease-in-out; 
+}
+
+#cancel-btn:hover {
+  color: var(--Dark-Blue);  
+}
+
+/* Styles applied to both payment and cancel buttons */
+#payment-btn, #cancel-btn {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;  
+  padding: 15px;  
+  width: 300px;  
+  margin: 50px auto;  
+  font-weight: 800;  
+}
+
+
+/* Mobile display styles (max-width 375px) */
+@media screen and (max-width: 375px) {
+
+  /* Background image for mobile */
+  .bg-image {
+    background: url("images/pattern-background-mobile.svg");
+    background-size: cover;
+  }
+
+  main {
+    margin: 0px auto;
+  }
+
+  #card {
+    width: 300px;
+    height: 560px;
+  }
+
+  .plan {
+    width: 250px;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  #payment-btn, #cancel-btn {
+    padding: 15px;
+    width: 250px;
+    margin: 50px auto;
+  }
+}
